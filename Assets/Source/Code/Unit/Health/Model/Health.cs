@@ -26,7 +26,7 @@ namespace Code.Unit
             _healthView = healthView;
             _damageVisualizer = damageVisualizer;
             _death = death;
-            healthView.SetAmount(health);
+            healthView?.SetAmount(health);
         }
 
         public void ApplyDamage(float damage)
