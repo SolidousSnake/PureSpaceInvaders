@@ -5,7 +5,7 @@ using UnityEngine;
 namespace Code.Presets.Animation
 {
     [Serializable]
-    public class ShakeAnimationPreset
+    public class ShakeAnimation
     {
         public ShakeRandomnessMode RandomnessMode = ShakeRandomnessMode.Harmonic;
         public Ease Ease = DOTween.defaultEaseType;

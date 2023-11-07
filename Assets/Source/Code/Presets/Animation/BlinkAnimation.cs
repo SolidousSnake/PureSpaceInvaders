@@ -1,7 +1,8 @@
-﻿namespace Code.Presets.Animation
+﻿
+namespace Code.Presets.Animation
 {
     [System.Serializable]
-    public class BlinkAnimationPreset
+    public class BlinkAnimation
     {
         public float Duration;
         public UnityEngine.Color Color;

@@ -14,14 +14,12 @@ namespace Code.Unit.Player
 
         private IMover _mover;
 
-        private IDamageVisualizer _visualizer;
-
         public void Initialize(GameOverPanel gameOverPanel, HealthView healthView)
         {
-            _visualizer = new PlayerDamageVisualizer(gameObject, _shakePreset);
-            Initialize(new PlayerDeath(gameOverPanel, Config.DeathParticles, this), _visualizer, healthView);
-
             _mover = new PlayerMover(GetComponent<Rigidbody2D>(), Config.MovementSpeed);
+            IDamageVisualizer visualizer = new PlayerDamageVisualizer(gameObject, _shakePreset);
+
+            Initialize(new PlayerDeath(gameOverPanel, Config.DeathParticles, this), visualizer, healthView);
         }
 
         private void FixedUpdate()

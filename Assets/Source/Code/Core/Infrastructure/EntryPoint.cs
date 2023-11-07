@@ -1,4 +1,6 @@
+using Code.Score.Model;
 using Code.Score.View;
+using Code.Spawners;
 using Code.UI;
 using Code.Unit;
 using Code.Unit.Player;
@@ -8,7 +10,6 @@ namespace Code.Core.Infrastructure
 {
     public sealed class EntryPoint : MonoBehaviour
     {
-        [SerializeField] private Game _game;
         [SerializeField] private PlayerUnit _playerPrefab;
 
         [Header("Configs")]
@@ -25,8 +26,9 @@ namespace Code.Core.Infrastructure
         {
             InitializeUi();
             InitializePlayer();
-            
-            _game.Initialize(_mapConfig, _spawnerConfig, _scoreView);
+
+            EnemySpawner enemySpawner = new(_mapConfig, _spawnerConfig, new ScoreModel(_scoreView));
+            enemySpawner.SpawnEnemiesAsync().Forget();
         }
 
         private void InitializePlayer()

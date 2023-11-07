@@ -2,12 +2,11 @@
 
 namespace Code.Presets.Animation
 {
-
-    [CreateAssetMenu(fileName = "New blink preset", menuName = "Source/Preset/Animation/Blink")]
+    [CreateAssetMenu(fileName = "New blink animation", menuName = "Source/Preset/Animation/Blink")]
     public class BlinkPreset : ScriptableObject
     {
-        [SerializeField] private BlinkAnimationPreset _preset;
+        [SerializeField] private BlinkAnimation _preset;
 
-        public BlinkAnimationPreset Preset => _preset;
+        public BlinkAnimation Preset => _preset;
     }
 }
