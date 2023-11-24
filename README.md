@@ -15,6 +15,6 @@ Entry point location: ```Assets/Code/Core/Infrastructure/EntryPoint.cs```
     - Object pooling
     - Dependency injection
     - MV
-    -Template method
+    - Template method
     - Strategy
     - Entry point
