@@ -4,7 +4,7 @@ Entry point location: ```Assets/Code/Core/Infrastructure/EntryPoint.cs```
 
 ### __Stack of project:__
    + TextMeshPro
-   + New input System
+   + New input system
    + Scriptable objects
    + NightPool
    + UniTask
@@ -15,5 +15,6 @@ Entry point location: ```Assets/Code/Core/Infrastructure/EntryPoint.cs```
     - Object pooling
     - Dependency injection
     - MV
+    -Template method
     - Strategy
     - Entry point
